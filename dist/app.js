@@ -28,7 +28,8 @@ const axiosInstance = axios_1.default.create({
 // Set up a cron job to ping the server every 10 minutes
 const job = new cron_1.CronJob('*/10 * * * *', () => {
     axiosInstance
-        .get('https://utshofolio-server.onrender.com/api/v1')
+        // .get('https://utshofolio-server.onrender.com/api/v1')
+        .get('https://utshofolio-server-kskf.onrender.com/api/v1')
         .then((response) => {
         console.log('😀🎉 Self-ping successful:', response.status);
     })
